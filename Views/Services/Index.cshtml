@@ -1,0 +1,82 @@
+﻿@model IEnumerable<CarWash.Models.Service>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.VehicleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wash.WashName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LicenseExpDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wash.WashId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WashTypeCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vehicle.VehicleId)
+        </th>
+        <th>
+        <th>
+            @Html.DisplayNameFor(model => model.VehicleTypeCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vehicle.VehicleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wash.WashName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LicenseExpDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WashId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WashTypeCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleTypeCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalCost)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ServiceId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ServiceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ServiceId })
+        </td>
+    </tr>
+}
+
+</table>

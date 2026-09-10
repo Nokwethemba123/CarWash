@@ -1,0 +1,74 @@
+﻿@model CarWash.Models.Service
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Service</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle.VehicleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle.VehicleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wash.WashName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wash.WashName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LicenseExpDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LicenseExpDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WashTypeCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WashTypeCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleTypeCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleTypeCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ServiceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
